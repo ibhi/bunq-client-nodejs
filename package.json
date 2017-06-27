@@ -1,0 +1,29 @@
+{
+  "name": "bunq-nodejs",
+  "version": "1.0.0",
+  "description": "bunq node api wrapper",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ts-node -- ./test.ts"
+  },
+  "author": "ibrahim",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node-rsa": "^0.4.0",
+    "async": "^2.4.1",
+    "node-rsa": "^0.4.2",
+    "randomstring": "^1.1.5",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.2",
+    "@types/randomstring": "^1.1.6",
+    "@types/request-promise": "^4.1.35",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.1.0",
+    "typescript": "^2.3.4"
+  }
+}
