@@ -215,6 +215,7 @@ export class Bunq {
     public deviceServer(options: IDeviceServerOptions): rp.RequestPromise {
         if(options.method === Bunq.method.POST) {
             // POST
+            this.sessionToken = options.installationToken || '';
             return this.generateRequest(options.method, `/device-server`, options.body || {});
         } else if(options.method === Bunq.method.GET) {
             if(options.id) {
@@ -231,6 +232,7 @@ export class Bunq {
     public sessionServer(options: IDeviceServerOptions): rp.RequestPromise {
         if(options.method === Bunq.method.POST) {
             // POST
+            this.sessionToken = options.installationToken || '';
             return this.generateRequest(options.method, `/session-server`, options.body || {});
         } else {
             throw new Error('Method not supported ' + options.method);

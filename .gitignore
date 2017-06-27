@@ -6,3 +6,4 @@ public
 session_token
 server_public_key
 api_key
+.env

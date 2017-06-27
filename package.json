@@ -6,7 +6,8 @@
   "types": "lib/index",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ts-node -- ./test.ts"
+    "build:live": "nodemon --exec ts-node -- ./example/example.ts",
+    "build": "tsc"
   },
   "author": "ibrahim",
   "license": "MIT",
@@ -19,9 +20,12 @@
     "request-promise": "^4.2.0"
   },
   "devDependencies": {
+    "@types/async": "^2.0.40",
+    "@types/dotenv": "^4.0.0",
     "@types/node": "^8.0.2",
     "@types/randomstring": "^1.1.6",
     "@types/request-promise": "^4.1.35",
+    "dotenv": "^4.0.0",
     "nodemon": "^1.11.0",
     "ts-node": "^3.1.0",
     "typescript": "^2.3.4"
